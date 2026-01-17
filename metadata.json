@@ -1,0 +1,9 @@
+{
+  "name": "BɔɔnSphere",
+  "short_name": "BɔɔnSphere",
+  "description": "Le Sanctuaire de la biosécurité Ngiembɔɔn. Patrimoine et Protection.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ]
+}

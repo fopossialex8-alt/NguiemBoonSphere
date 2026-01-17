@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BɔɔnSphere</title>
+    <meta name="theme-color" content="#1a0f08">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Outfit:wght@300;400;600;700;900&display=swap');
+      
+      :root {
+        --color-ebony: #1a0f08;
+        --color-ochre: #b08968;
+        --color-earth: #8b4513;
+        --color-traditional-bg: #f5f2eb; /* Couleur Terre/Argile douce */
+        --color-traditional-surface: #fdfaf5; /* Couleur Fibre/Crème chaude */
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: var(--color-traditional-bg);
+        color: var(--color-ebony);
+        overflow-x: hidden;
+      }
+
+      .font-trad { font-family: 'Cinzel', serif; }
+
+      .traditional-pattern {
+        background-image: url("https://www.transparenttextures.com/patterns/woven.png");
+        background-color: var(--color-traditional-bg);
+      }
+
+      /* Remplacement global et forcé de toutes les surfaces blanches */
+      .bg-white {
+        background-color: var(--color-traditional-surface) !important;
+      }
+      
+      .bg-stone-50 {
+        background-color: #f2eee4 !important;
+      }
+
+      .hero-text-shadow {
+        text-shadow: 0 4px 12px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.5);
+      }
+
+      .card-table-row:nth-child(even) {
+        background-color: rgba(176, 137, 104, 0.08);
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: var(--color-traditional-bg); }
+      ::-webkit-scrollbar-thumb { background: var(--color-ochre); border-radius: 4px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="traditional-pattern">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
